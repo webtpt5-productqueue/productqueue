@@ -13,6 +13,8 @@ class ProjectLogin extends Component {
     render() {
         let { email, password } = this.state;
         let { isLoginPending, isLoginSuccess, loginError } = this.props;
+        //this is a test
+        const test = "test";
 
         return <div className="login-form-wrapper" onSubmit={this.onSubmit}>
             <form className="form" name="loginform">
