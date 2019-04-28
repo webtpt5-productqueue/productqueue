@@ -23,7 +23,7 @@ class Form extends React.Component {
             <div className="project-form">
                 <form className="form" onSubmit={}>
                     <label for="first-name">First Name</label>
-                    <input 
+                    <input
                         type="text"
                         name="first-name"
                         placeholder="First Name"
@@ -31,7 +31,7 @@ class Form extends React.Component {
                         value={this.state.firstName}
                     />
                     <label for="last-name">Last Name</label>
-                    <input 
+                    <input
                         type="text"
                         name="last-name"
                         placeholder="Last Name"
@@ -40,7 +40,7 @@ class Form extends React.Component {
                     />
 
                     <label for="project">Project Name</label>
-                    <input 
+                    <input
                         type="text"
                         name="project"
                         placeholder="Project"
@@ -49,7 +49,7 @@ class Form extends React.Component {
                     />
 
                     <label for="project-description">Project Description</label>
-                    <input 
+                    <input
                         type="text"
                         name="project-description"
                         placeholder="Description"
