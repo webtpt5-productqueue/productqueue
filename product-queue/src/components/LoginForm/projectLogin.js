@@ -3,6 +3,9 @@ import '../LoginForm/projectLogin.css';
 import { connect } from 'react-redux';
 import { login } from '../../redux/reducer.js';
 
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import RegisterForm from '../RegisterForm';
+
 class ProjectLogin extends Component {
 
     constructor(props) {
@@ -26,7 +29,11 @@ class ProjectLogin extends Component {
                 <input className="form" type="password" placeholder="Password" name="password" onChange={e => this.setState({ password: e.target.value })} />
 
                 <input className="form" type="submit" value="login" />
-                <input className="form" type="submit" value="register" />
+
+                <Router>
+                    <Link to="/register"><input className="form" type="submit" value="register" /></Link>
+                    <Route exact path="/register" component={RegisterForm} />
+                </Router>
 
                 {isLoginPending && <div>Please wait...</div>}
                 {isLoginSuccess && <div>Let's get started!</div>}
