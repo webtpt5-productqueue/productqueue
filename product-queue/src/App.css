@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color:#002070;
 }
 
 body {
@@ -9,8 +10,9 @@ body {
 }
 
 
-.login-form-wrapper {
-    width: 500px;
+.projectlogin {
+    width: 600px;
+    margin-top: 40px;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -22,6 +24,7 @@ body {
 .form {
     color: #ffffff;
     background-color: #55596d;
+    padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 30px;
 }
@@ -33,7 +36,7 @@ body {
     margin: 20px auto;
     text-align: center;
     border: 2px solid #08addd;
-    background-color: #08addd;
+    background-color: #ffffff;
     padding: 14px 10px;
     width: 200px;
     outline: none;
@@ -43,7 +46,34 @@ body {
 }
 
 ::placeholder {
-    color: white;
+    color: cream;
+}
+
+.btn:hover { 
+    background-color: #bb1333;
+}
+
+.btn {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn {
+    color: cream;
+    border: 0;
+    background: none;
+    display: inline-block;
+    margin: 20px auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    border: 1px solid #bb1333;
+    background-color: #ffffff;
+    padding: 14px 40px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
 }
 
 .image {
@@ -53,20 +83,3 @@ body {
     width: 70%;
 }
 
-.form input[type =  "submit"] {
-    border: 0;
-    background: none;
-    display: inline-block;
-    margin: 20px auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-    border: 2px solid #bb1333;
-    background-color: #bb1333;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-}

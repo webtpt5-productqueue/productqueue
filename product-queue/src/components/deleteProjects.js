@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class PreviewProjects extends Component {
+class DeleteProjects extends Component {
 
     constructor(props) {
         super(props);
@@ -14,7 +14,7 @@ class PreviewProjects extends Component {
     render() {
         return (
             <div className="test">
-                <h1>Preview all projects</h1>
+                <h1>Delete project</h1>
             </div>
         )
     };

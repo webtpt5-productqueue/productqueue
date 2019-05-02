@@ -1,6 +1,8 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import PreviewProjects from '../components/previewProjects';
 
 import { login } from '../actions';
 
@@ -31,36 +33,34 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="projectlogin">
-                <form className="form" onSubmit={this.login}>
-                    <label for="email">Email</label>
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        value={this.state.credentials.email}
-                        onChange={this.handleChange}
-                    />
-                    <label for="password">Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="••••••••"
-                        value={this.state.credentials.password}
-                        onChange={this.handleChange}
-                    />
-                    <div className="error" />
-                    {this.props.error && <p className="error">{this.props.error}</p>}
+            <Router>
+                <div className="projectlogin">
+                    <img className="image" alt="Product Queue logo" src={require('../images/pq-logo.png')} />
+                    <form className="form" onSubmit={this.login}>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={this.state.credentials.email}
+                            onChange={this.handleChange}
+                        />
 
-                    <button>
-                        {this.props.loggingIn ? (
-                            <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />
-                        ) : (
-                                'Login'
-                            )}
-                    </button>
-                </form>
-            </div>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="••••••••"
+                            value={this.state.credentials.password}
+                            onChange={this.handleChange}
+                        />
+                        <div className="error" />
+                        {this.props.error && <p className="error">{this.props.error}</p>}
+
+                        <button className="btn" type="submit">Login</button>
+                        <button className="btn" type="submit">Register</button>
+
+                    </form>
+                </div>
+            </Router>
         );
     }
 }
