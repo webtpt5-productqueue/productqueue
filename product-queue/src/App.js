@@ -13,6 +13,7 @@ function App() {
       <div className="App">
         <Route path="/home" exact component={PreviewProjects} />
         <Route path="/login" exact component={Login} />
+        <Route path="/create" exact component={Login} />
       </div>
     </Router>
   );
