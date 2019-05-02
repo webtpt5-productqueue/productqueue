@@ -14,6 +14,7 @@ function App() {
         <Route path="/home" exact component={PreviewProjects} />
         <Route path="/login" exact component={Login} />
         <Route path="/create" exact component={Login} />
+        <Route path="/delete" exact component={Login} />
       </div>
     </Router>
   );
