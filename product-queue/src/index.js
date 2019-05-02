@@ -9,8 +9,7 @@ import App from './App';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import reducer from './reducers';
+// import reducer from './reducers';
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,5 +1,7 @@
 import Promise from 'es6-promise';
 
+import axios from 'axios';
+
 const LOGIN_PENDING = 'LOGIN_PENDING';
 const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 const LOGIN_ERROR = 'LOGIN_ERROR';
@@ -43,10 +45,31 @@ export function login(email, password) {
     };
 }
 
+export const REGISTER_PENDING = "REGISTER_PENDING";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_ERROR   = "REGISTER_ERROR";
+
+export const register = credentials => dispatch => {
+    dispatch({ type: REGISTER_PENDING });
+    return axios 
+            .post(`http://localhost:3000/api/users/register`, credentials) 
+            .then(res => {
+                localStorage.setItem('token', res.data.token)
+                dispatch({ type: REGISTER_SUCCESS })
+            })
+            .catch(err => {
+                dispatch({ type: REGISTER_ERROR, payload: err });
+                console.log(`ERROR!!: ${err}`);
+            });
+}
+
 export default function actions(state = {
     isLoginPending: false,
     isLoginSuccess: false,
-    loginError: null
+    loginError: null,
+    isRegisterPending: false,
+    isRegisterSuccess: false,
+    isRegisterError: null
 }, action) {
 
     switch (action.type) {
@@ -67,6 +90,24 @@ export default function actions(state = {
                 ...state,
                 isLoginError: action.loginError
             };
+
+        case REGISTER_PENDING:
+            return {
+                ...state,
+                isRegisterPending: action.isRegisterPending
+            };
+
+        case REGISTER_SUCCESS:
+            return {
+                ...state,
+                isRegisterSuccess: action.isRegisterSuccess
+            };
+
+        case REGISTER_ERROR:
+            return {
+                ...state,
+                isRegisterError: action.isRegisterError
+            }
 
         default:
             return state;
