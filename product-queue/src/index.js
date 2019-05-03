@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import store from './redux/store.js';
-import ProjectLogin from './components/LoginForm/projectLogin.js';
-//import './index.css';
+import thunk from 'redux-thunk';
+
+import reducer from './reducers';
 import App from './App';
 
-import thunk from 'redux-thunk';
-import logger from 'redux-logger';
-import { createStore, applyMiddleware } from 'redux';
-// import reducer from './reducers';
+import './App.css';
+//import logger from 'redux-logger';
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>
         <App />
-        <ProjectLogin />
     </Provider>, document.getElementById('root'));

@@ -1,12 +1,29 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Login from './components/Login';
+import PreviewProjects from './components/previewProjects';
+import CreateProjects from './components/previewProjects';
+import ViewProjects from './components/previewProjects';
+import DeleteProjects from './components/previewProjects';
+import EditProjects from './components/previewProjects';
+
 //import Form from '../src/components/Form.js';
+
 
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Router>
+      <div className="App">
+        <Route path={"/login/"} exact strict component={Login} />
+        <Route path={"/home/"} exact strict component={PreviewProjects} />
+        <Route path={"/create/"} exact component={CreateProjects} />
+        <Route path={"/delete/"} exact component={DeleteProjects} />
+        <Route path={"/edit/"} exact component={EditProjects} />
+        <Route path={"/view/"} exact component={ViewProjects} />
+      </div>
+    </Router>
   );
 }
 
