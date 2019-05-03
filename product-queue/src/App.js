@@ -16,12 +16,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path="/login" exact component={Login} />
-        <Route path="/home" exact component={PreviewProjects} />
-        <Route path="/create" exact component={CreateProjects} />
-        <Route path="/delete" exact component={DeleteProjects} />
-        <Route path="/edit" exact component={EditProjects} />
-        <Route path="/view" exact component={ViewProjects} />
+        <Route path={"/login/"} exact strict component={Login} />
+        <Route path={"/home/"} exact strict component={PreviewProjects} />
+        <Route path={"/create/"} exact component={CreateProjects} />
+        <Route path={"/delete/"} exact component={DeleteProjects} />
+        <Route path={"/edit/"} exact component={EditProjects} />
+        <Route path={"/view/"} exact component={ViewProjects} />
       </div>
     </Router>
   );
