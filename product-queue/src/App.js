@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/Login';
 import PreviewProjects from './components/previewProjects';
-import CreateProjects from './components/previewProjects';
-import ViewProjects from './components/previewProjects';
-import DeleteProjects from './components/previewProjects';
-import EditProjects from './components/previewProjects';
+import CreateProjects from './components/createProjects';
+import ViewProjects from './components/viewProjects';
+import DeleteProjects from './components/deleteProjects';
+import EditProjects from './components/editProjects';
 
 //import Form from '../src/components/Form.js';
 
@@ -16,12 +16,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path={"/login/"} exact strict component={Login} />
-        <Route path={"/home/"} exact strict component={PreviewProjects} />
-        <Route path={"/create/"} exact component={CreateProjects} />
-        <Route path={"/delete/"} exact component={DeleteProjects} />
-        <Route path={"/edit/"} exact component={EditProjects} />
-        <Route path={"/view/"} exact component={ViewProjects} />
+        <div className="Routes">
+          <Switch>
+            <Route exact path={"/"} component={Login} />
+            <Route path={"/home"} component={PreviewProjects} />
+            <Route path={"/create"} component={CreateProjects} />
+            <Route path={"/delete"} component={DeleteProjects} />
+            <Route path={"/edit"} component={EditProjects} />
+            <Route path={"/view"} component={ViewProjects} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );

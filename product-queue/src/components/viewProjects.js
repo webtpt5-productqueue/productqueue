@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+//import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class ViewProjects extends Component {
@@ -13,7 +14,7 @@ class ViewProjects extends Component {
 
     componentDidMount() {
         const id = this.props.match.params.id;
-        this.fetchProject(id);
+        //this.fetchProject(id);
     }
     /*
     fetchNote = id => {

@@ -1,8 +1,7 @@
 import React from 'react';
-import Loader from 'react-loader-spinner';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import PreviewProjects from '../components/previewProjects';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 import { login } from '../actions';
 

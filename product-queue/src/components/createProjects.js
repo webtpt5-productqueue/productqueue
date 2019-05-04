@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Axios from 'axios';
+//import Axios from 'axios';
 
 class CreateProjects extends Component {
 
@@ -36,7 +36,7 @@ class CreateProjects extends Component {
     render() {
         return (
             <div className="projectsContainer">
-                <h1>Create New Note:</h1>
+                <h2>Create New Note:</h2>
                 <form className="form" onSubmit={this.addNew}>
                     <textarea className="title"
                         type='text'

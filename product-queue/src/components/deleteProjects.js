@@ -30,6 +30,7 @@ class DeleteProjects extends Component {
                         </Link>
                     </div>
                 </div>
+
             </div>
         )
     };
