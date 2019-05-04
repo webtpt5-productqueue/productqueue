@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+//import Axios from 'axios';
 
 
 class EditProjects extends Component {
@@ -13,9 +13,9 @@ class EditProjects extends Component {
         };
     }
 
-    ComponentDidMount() {
+    componentDidMount() {
         const id = this.props.match.params.id;
-        this.fetchProject(id);
+        //this.fetchProject(id);
     }
     /*
     fetchProject = id => {
