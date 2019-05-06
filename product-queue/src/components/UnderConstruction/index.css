@@ -1,0 +1,39 @@
+:root {
+  --background: #F0F0F0;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+}
+
+#uc-wrapper * {
+  background: var(--background);
+  text-align: center;
+}
+
+#uc-wrapper {
+  height: 100%;
+  min-height: 16rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  background: var(--background);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+}
+
+#uc-wrapper .title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+#uc-wrapper .content {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}

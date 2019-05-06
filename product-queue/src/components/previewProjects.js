@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UnderConstruction from './UnderConstruction/'
 
 //import Axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -34,6 +35,7 @@ class PreviewProjects extends Component {
         return (
             <div className="projectsContainer">
                 <h2>Your Projects</h2>
+                <UnderConstruction />
                 <div className="projects">
                     {this.state.projects.map((project) => (
                         <Link key={project._id} className="project" to={`/project/${project._id}`}>
